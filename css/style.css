@@ -48,10 +48,104 @@ td, th {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Roboto", cursive;
 }
 
-* {
-  font-family: "Roboto", cursive;
+/* Absolute Center Spinner */
+.loading {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+.loading:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(rgba(20, 20, 20, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.loading:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.loading:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  -webkit-animation: spinner 150ms infinite linear;
+          animation: spinner 150ms infinite linear;
+  border-radius: 0.5em;
+  -webkit-box-shadow: rgba(147, 86, 220, 0.75) 1.5em 0 0 0, rgba(147, 86, 220, 0.75) 1.1em 1.1em 0 0, rgba(147, 86, 220, 0.75) 0 1.5em 0 0, rgba(147, 86, 220, 0.75) -1.1em 1.1em 0 0, rgba(147, 86, 220, 0.75) -1.5em 0 0 0, rgba(255, 121, 218, 0.75) -1.1em -1.1em 0 0, rgba(255, 121, 218, 0.75) 0 -1.5em 0 0, rgba(255, 121, 218, 0.75) 1.1em -1.1em 0 0;
+          box-shadow: rgba(147, 86, 220, 0.75) 1.5em 0 0 0, rgba(147, 86, 220, 0.75) 1.1em 1.1em 0 0, rgba(147, 86, 220, 0.75) 0 1.5em 0 0, rgba(147, 86, 220, 0.75) -1.1em 1.1em 0 0, rgba(147, 86, 220, 0.75) -1.5em 0 0 0, rgba(255, 121, 218, 0.75) -1.1em -1.1em 0 0, rgba(255, 121, 218, 0.75) 0 -1.5em 0 0, rgba(255, 121, 218, 0.75) 1.1em -1.1em 0 0;
+}
+
+/* Animation */
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    visibility: hidden;
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    visibility: hidden;
+  }
+}
+
+#hideMeAfter2Seconds {
+  -webkit-animation: hideAnimation 0s ease-in 2s;
+          animation: hideAnimation 0s ease-in 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes hideAnimation {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes hideAnimation {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
 }
 
 .logo {
@@ -167,6 +261,21 @@ td, th {
   -webkit-box-shadow: 0px 2px 4px 0px #00000033;
           box-shadow: 0px 2px 4px 0px #00000033;
   padding: 20px;
+  cursor: pointer;
+}
+
+.toolsButton .button1:hover {
+  background-color: rgba(147, 86, 220, 0.2);
+  -webkit-box-shadow: 0px 6px 10px 0px #00000033;
+          box-shadow: 0px 6px 10px 0px #00000033;
+}
+
+.toolsButton .button1:hover button {
+  background-color: rgba(147, 86, 220, 0);
+}
+
+.toolsButton .button1:hover i {
+  color: #9356DC;
 }
 
 .toolsButton .button2 {
@@ -189,6 +298,21 @@ td, th {
   padding: 20px;
   margin-top: 20px;
   text-align: center;
+  cursor: pointer;
+}
+
+.toolsButton .button2:hover {
+  background-color: rgba(147, 86, 220, 0.2);
+  -webkit-box-shadow: 0px 6px 10px 0px #00000033;
+          box-shadow: 0px 6px 10px 0px #00000033;
+}
+
+.toolsButton .button2:hover button {
+  background-color: rgba(147, 86, 220, 0);
+}
+
+.toolsButton .button2:hover i {
+  color: #9356DC;
 }
 
 .toolsButton .button3 {
@@ -210,7 +334,24 @@ td, th {
           box-shadow: 0px 2px 4px 0px #00000033;
   padding: 20px;
   margin-top: 20px;
-  text-align: center;
+}
+
+.toolsButton .button3 p {
+  padding: 4px 4px 4px 6px;
+}
+
+.toolsButton .button3:hover {
+  background-color: rgba(147, 86, 220, 0.2);
+  -webkit-box-shadow: 0px 6px 10px 0px #00000033;
+          box-shadow: 0px 6px 10px 0px #00000033;
+}
+
+.toolsButton .button3:hover button {
+  background-color: rgba(147, 86, 220, 0);
+}
+
+.toolsButton .button3:hover i {
+  color: #9356DC;
 }
 
 .toolsButton button {
@@ -285,11 +426,25 @@ td, th {
 }
 
 .restauranteCard .imgR {
+  position: relative;
   border-radius: 15px 15px 0 0;
   width: 100%;
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.restauranteCard span {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 5px;
+  background-color: #99E2D0;
+  color: #008766;
+  font-size: small;
+  font-weight: bold;
 }
 
 .restauranteCard .containerR {
@@ -311,6 +466,11 @@ td, th {
 .restauranteCard h4 {
   font-weight: bold;
   margin-bottom: 5px;
+  color: black;
+}
+
+.restauranteCard p {
+  color: black;
 }
 
 .restauranteCard .far {
@@ -340,5 +500,53 @@ td, th {
 .restauranteCard .fas:focus {
   background-color: transparent;
   color: transparent;
+}
+
+.foot {
+  background-color: #353535;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.foot h1 {
+  font-family: "Shrikhand", sans-serif;
+  margin-bottom: 10px;
+}
+
+.foot h1, .foot p {
+  margin-left: 20px;
+}
+
+.foot p {
+  margin-bottom: 7px;
+}
+
+.foot .foot1 {
+  position: relative;
+}
+
+.foot .foot1 i {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.foot .foot1 p {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.foot .foot2 {
+  position: relative;
+}
+
+.foot .foot2 i {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.foot .foot2 p {
+  display: inline-block;
+  margin-left: 0px;
 }
 /*# sourceMappingURL=style.css.map */
