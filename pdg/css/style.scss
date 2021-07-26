@@ -1,0 +1,295 @@
+$font-stack: 'Roboto', cursive;
+$font-title: 'Shrikhand', sans-serif;
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+@import "reset.scss";
+
+* {
+    box-sizing: border-box;
+    font-family: $font-stack;
+}
+
+.logo {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    img {
+        width: 50%;
+    }
+
+    i {
+        position: absolute;
+        left: 12px;
+        top: 6px;
+    }
+}
+
+.imgMenu {
+    img {
+        position: relative;
+    }
+}
+
+.menu {
+    position: relative;
+    top: -25px;
+    background-color: #f6f6f6;
+    padding-top: 25px;
+    padding-bottom: 40px;
+    border-radius: 25px 25px 0 0;
+
+    & > h1 {
+        font-family: $font-title;
+        font-size: larger;
+        font-weight: bold;
+        margin-left: 15px;
+        margin-bottom: 20px;
+    }
+
+    .hnp {
+        position: absolute;
+        top: 30px;
+        right: 25px;
+        z-index: 10;
+        background-color: white;
+
+        &:focus {
+            z-index: 0;
+            color: transparent;
+            background-color: transparent;
+            transition: all 2s ease-out;
+        }
+    }
+
+    .hp {
+        position: absolute;
+        z-index: 1;
+        top: 30px;
+        right: 25px;
+        color: $secondary-color;
+
+        &:focus {
+            background-color: transparent;
+            color: transparent;
+        }
+    }
+
+    .container {
+        position: relative;
+        color: black;
+        padding: 10px 20px 10px 10px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-radius: 15px 15px 15px 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+
+    button {
+        margin-top: 25px;
+        color: white;
+        border: 0 solid white;
+        background: $secondary-color;
+        background: linear-gradient(174deg, $secondary-color 0%, $primary-color 70%);
+        border-radius: 20px;
+        font-size: small;
+        font-weight: 400;
+        padding: 10px 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .fakediv {
+        animation: fade 3s forwards 1s;
+        opacity: 0;
+    }
+    
+    .entrees {
+        animation: fade 3s forwards 1s;
+        opacity: 0;
+    }
+
+    .plats {
+        animation: fade 3s forwards 1s;
+        opacity: 0;
+    }
+
+    .desserts {
+        animation: fade 3s forwards 1s;
+        opacity: 0;
+    }
+
+    @keyframes fade {
+        from {opacity: 0; padding-bottom: 1000px;}
+        to {opacity: 1; padding-bottom: auto;}
+    }
+}
+
+.container {
+    h1 {
+        font-weight: bold;
+        font-size: small;
+        margin-bottom: 3px;
+    }
+
+    p {
+        font-size: small;
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    h3 {
+        position: absolute;
+        font-size: small;
+        bottom: 14px;
+        right: 16px;
+    }
+
+    &:active {
+        .addF {
+            display: inline;
+            animation: r-t-l 1s linear 0s 1 forwards;
+        }
+
+        h3 {
+            right: 70px;
+        }
+
+        p {
+            width: 180px;
+        }
+    }
+}
+
+@keyframes r-t-l {
+    from {padding: 19px 0px 19px 0px;}
+    to {padding: 19px;}
+}
+
+.addF {
+    position: absolute;
+    background-color: $tertiary-color;
+    color: white;
+    border: 1px solid $tertiary-color;
+    border-radius: 0 15px 15px 0;
+    padding: 19px;
+    top: 0px;
+    right: 0px;
+    overflow: hidden;
+    display: none;
+}
+
+.button {
+    text-align: center;
+}
+
+.entrees {
+    h4 {
+        margin-left: 15px;
+        font-weight: 300;
+        font-size: small;
+        border-bottom: 2px solid $tertiary-color;
+        margin-right: 87%;
+        margin-bottom: 15px;
+    }
+
+    p {
+        overflow: hidden;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+  	    width:229px;
+    }
+}
+
+.plats {
+    h4 {
+        margin-left: 15px;
+        font-weight: 300;
+        font-size: small;
+        border-bottom: 2px solid $tertiary-color;
+        margin-right: 87%;
+        margin-bottom: 15px;
+        margin-top: 30px;
+    }
+
+    p {
+        overflow: hidden;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+  	    width:229px;
+    }
+}
+
+.desserts {
+    h4 {
+        margin-left: 15px;
+        font-weight: 300;
+        font-size: small;
+        border-bottom: 2px solid $tertiary-color;
+        margin-right: 87%;
+        margin-bottom: 15px;
+        margin-top: 30px;
+    }
+
+    p {
+        overflow: hidden;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+  	    width:231px;
+    }
+}
+
+.foot {
+    background-color: #353535;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    h1 {
+        font-family: $font-title;
+        margin-bottom: 10px;
+    }
+
+    h1, p {
+        margin-left: 20px;
+    }
+
+    p {
+        margin-bottom: 7px;
+    }
+
+    .foot1 {
+        position: relative;
+        i {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        p {
+            display: inline-block;
+            margin-left: 5px;
+        }
+    }
+
+    .foot2 {
+        position: relative;
+        i {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        p {
+            display: inline-block;
+            margin-left: 0px;
+        }
+    }
+}
