@@ -1,1 +1,392 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", cursive;
+}
+
+.logo {
+  position: relative;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.logo img {
+  width: 50%;
+}
+
+.logo i {
+  position: absolute;
+  left: 12px;
+  top: 6px;
+}
+
+.imgMenu img {
+  position: relative;
+}
+
+.menu {
+  position: relative;
+  top: -25px;
+  background-color: #f6f6f6;
+  padding-top: 25px;
+  padding-bottom: 40px;
+  border-radius: 25px 25px 0 0;
+}
+
+.menu > h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: larger;
+  font-weight: bold;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.menu .hnp {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  z-index: 10;
+  background-color: white;
+}
+
+.menu .hnp:focus {
+  z-index: 0;
+  color: transparent;
+  background-color: transparent;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+
+.menu .hp {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  right: 25px;
+  color: #FF79DA;
+}
+
+.menu .hp:focus {
+  background-color: transparent;
+  color: transparent;
+}
+
+.menu .container {
+  position: relative;
+  color: black;
+  padding: 10px 20px 10px 10px;
+  background-color: white;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 15px 15px 15px 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.menu button {
+  margin-top: 25px;
+  color: white;
+  border: 0 solid white;
+  background: #FF79DA;
+  background: linear-gradient(174deg, #FF79DA 0%, #9356DC 70%);
+  border-radius: 20px;
+  font-size: small;
+  font-weight: 400;
+  padding: 10px 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu .fakediv {
+  -webkit-animation: fade 3s forwards 1s;
+          animation: fade 3s forwards 1s;
+  opacity: 0;
+}
+
+.menu .entrees {
+  -webkit-animation: fade 3s forwards 1s;
+          animation: fade 3s forwards 1s;
+  opacity: 0;
+}
+
+.menu .plats {
+  -webkit-animation: fade 3s forwards 1s;
+          animation: fade 3s forwards 1s;
+  opacity: 0;
+}
+
+.menu .desserts {
+  -webkit-animation: fade 3s forwards 1s;
+          animation: fade 3s forwards 1s;
+  opacity: 0;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+    padding-bottom: 1000px;
+  }
+  to {
+    opacity: 1;
+    padding-bottom: 10px;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    padding-bottom: 1000px;
+  }
+  to {
+    opacity: 1;
+    padding-bottom: 10px;
+  }
+}
+
+.container h1 {
+  font-weight: bold;
+  font-size: small;
+  margin-bottom: 3px;
+}
+
+.container p {
+  font-size: small;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.container h3 {
+  position: absolute;
+  font-size: small;
+  bottom: 14px;
+  right: 16px;
+}
+
+.container:active .addF {
+  display: inline;
+  -webkit-animation: r-t-l 1s linear 0s 1 forwards;
+          animation: r-t-l 1s linear 0s 1 forwards;
+}
+
+.container:active i {
+  -webkit-animation: rotate 1s linear 0s 1 forwards;
+          animation: rotate 1s linear 0s 1 forwards;
+}
+
+.container:active h3 {
+  right: 70px;
+}
+
+.container:active p {
+  width: 180px;
+}
+
+@-webkit-keyframes r-t-l {
+  from {
+    padding: 19px 0px 19px 0px;
+  }
+  to {
+    padding: 19px;
+  }
+}
+
+@keyframes r-t-l {
+  from {
+    padding: 19px 0px 19px 0px;
+  }
+  to {
+    padding: 19px;
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+.addF {
+  position: absolute;
+  background-color: #99E2D0;
+  color: white;
+  border: 1px solid #99E2D0;
+  border-radius: 0 15px 15px 0;
+  padding: 19px;
+  top: 0px;
+  right: 0px;
+  overflow: hidden;
+  display: none;
+}
+
+.button {
+  text-align: center;
+}
+
+.entrees h4 {
+  margin-left: 15px;
+  font-weight: 300;
+  font-size: small;
+  border-bottom: 2px solid #99E2D0;
+  margin-right: 87%;
+  margin-bottom: 15px;
+}
+
+.entrees p {
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 229px;
+}
+
+.plats h4 {
+  margin-left: 15px;
+  font-weight: 300;
+  font-size: small;
+  border-bottom: 2px solid #99E2D0;
+  margin-right: 87%;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+.plats p {
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 229px;
+}
+
+.desserts h4 {
+  margin-left: 15px;
+  font-weight: 300;
+  font-size: small;
+  border-bottom: 2px solid #99E2D0;
+  margin-right: 87%;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+.desserts p {
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 231px;
+}
+
+.foot {
+  background-color: #353535;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.foot h1 {
+  font-family: "Shrikhand", sans-serif;
+  margin-bottom: 10px;
+}
+
+.foot h1, .foot p {
+  margin-left: 20px;
+}
+
+.foot p {
+  margin-bottom: 7px;
+}
+
+.foot .foot1 {
+  position: relative;
+}
+
+.foot .foot1 i {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.foot .foot1 p {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.foot .foot2 {
+  position: relative;
+}
+
+.foot .foot2 i {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.foot .foot2 p {
+  display: inline-block;
+  margin-left: 0px;
+}
+/*# sourceMappingURL=style.css.map */

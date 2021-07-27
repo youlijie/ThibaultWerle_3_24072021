@@ -180,7 +180,7 @@ td, th {
   }
   to {
     opacity: 1;
-    padding-bottom: auto;
+    padding-bottom: 10px;
   }
 }
 
@@ -191,7 +191,7 @@ td, th {
   }
   to {
     opacity: 1;
-    padding-bottom: auto;
+    padding-bottom: 10px;
   }
 }
 
@@ -219,6 +219,11 @@ td, th {
           animation: r-t-l 1s linear 0s 1 forwards;
 }
 
+.container:active i {
+  -webkit-animation: rotate 1s linear 0s 1 forwards;
+          animation: rotate 1s linear 0s 1 forwards;
+}
+
 .container:active h3 {
   right: 70px;
 }
@@ -242,6 +247,28 @@ td, th {
   }
   to {
     padding: 19px;
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
