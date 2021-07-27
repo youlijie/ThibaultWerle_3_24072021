@@ -10,13 +10,11 @@ $tertiary-color: #99E2D0;
     font-family: $font-stack;
 }
 
-/* Absolute Center Spinner */
 .loading {
     position: fixed;
     z-index: 999;
     height: 2em;
     width: 2em;
-    overflow: show;
     margin: auto;
     top: 0;
     left: 0;
@@ -24,7 +22,6 @@ $tertiary-color: #99E2D0;
     right: 0;
   }
   
-  /* Transparent Overlay */
   .loading:before {
     content: '';
     display: block;
@@ -36,9 +33,7 @@ $tertiary-color: #99E2D0;
     background: radial-gradient(rgba(20, 20, 20,.8), rgba(0, 0, 0, .8));
   }
   
-  /* :not(:required) hides these rules from IE9 and below */
   .loading:not(:required) {
-    /* hide "loading..." text */
     font: 0/0 a;
     color: transparent;
     text-shadow: none;
@@ -57,8 +52,6 @@ $tertiary-color: #99E2D0;
     border-radius: 0.5em;
     box-shadow: rgba(147, 86, 220, 0.75) 1.5em 0 0 0, rgba(147, 86, 220, 0.75) 1.1em 1.1em 0 0, rgba(147, 86, 220, 0.75) 0 1.5em 0 0, rgba(147, 86, 220, 0.75) -1.1em 1.1em 0 0, rgba(147, 86, 220, 0.75) -1.5em 0 0 0, rgba(255, 121, 218, 0.75) -1.1em -1.1em 0 0, rgba(255, 121, 218, 0.75) 0 -1.5em 0 0, rgba(255, 121, 218, 0.75) 1.1em -1.1em 0 0;
   }
-  
-  /* Animation */
   
   @keyframes spinner {
     0% {
@@ -325,7 +318,7 @@ $tertiary-color: #99E2D0;
 
     span {
         position: absolute;
-        top: 5px;
+        top: -120px;
         right: 10px;
         border: 1px solid transparent;
         border-radius: 2px;
@@ -346,7 +339,7 @@ $tertiary-color: #99E2D0;
         border-radius: 0px 0px 15px 15px;
         margin-left: auto;
         margin-right: auto;
-        width: 90%;
+        width: 100%;
         text-decoration: none;
     }
 
@@ -386,6 +379,28 @@ $tertiary-color: #99E2D0;
             background-color: transparent;
             color: transparent;
         }
+    }
+
+    .pdgCard {
+        position: relative;
+        width: 90%;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .neCard {
+        position: relative;
+        width: 90%; 
+        padding-bottom: 20px;
+    }
+
+    .alfCard {
+        width: 90%; 
+        padding-bottom: 20px;
+    }
+
+    .ddsCard {
+        width: 90%;
     }
 }
 
@@ -431,6 +446,212 @@ $tertiary-color: #99E2D0;
         p {
             display: inline-block;
             margin-left: 0px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .foot {
+        h1 {
+            margin-bottom: 20px;
+        }
+    }
+    
+    .footerText {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .toolsButton {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .button1 {
+            width: 25%;
+            margin: 20px 0 0;
+        }
+
+        .button2 {
+            width: 25%;
+        }
+
+        .button3 {
+            width: 25%;
+        }
+    }
+
+    .logo {
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+
+        img {
+        width: 30%;
+        }
+    }
+    
+    .headerText {
+        padding-bottom: 20px;
+        padding-top: 12.5px;
+    }
+
+    .headerTools {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .restaurant {
+        padding-bottom: 30px;
+        padding-top: 20px;
+    }
+    
+    .restauranteCard {
+        display: grid;
+        grid-template-areas: "pdg ne"
+                             "alf dds";
+        gap: 20px 20px;
+        margin-left: 15px;
+        margin-right: 15px;                     
+
+        .pdgCard {
+            width: 100%;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+                        
+        .neCard {
+            width: 100%; 
+            padding-bottom: 0px;
+        }
+                        
+        .alfCard {
+            width: 100%; 
+            padding-bottom: 0px;
+        }
+                        
+        .ddsCard {
+            width: 100%;
+        }
+    }
+
+    .foot {
+        padding: 20px 0 40px;
+    }
+
+    .restauranteCard {
+        .far {
+            &:hover {
+                z-index: 0;
+                color: transparent;
+                background-color: transparent;
+                transition: all 2s ease-out;
+            }
+        }
+    
+        .fas {
+            &:hover {
+                background-color: transparent;
+                color: transparent;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .logo {
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+
+        img {
+        width: 20%;
+        }
+    }
+
+    .toolsButton {
+        margin-top: 0px;
+    }
+
+    .restauranteCard {
+        justify-items: center;
+        margin-left: 0px;
+        margin-right: 0px;                     
+
+        .pdgCard {
+            width: 70%;
+        }
+                        
+        .neCard {
+            width: 70%;
+        }
+                        
+        .alfCard {
+            width: 70%;
+        }
+                        
+        .ddsCard {
+            width: 70%;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+
+    .logo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        img {
+        width: 15%;
+        }
+    }
+
+    .search {
+        form {
+            padding: 21px 0;
+        }
+    }
+    
+    .headerText {
+        padding: 31px 0;
+    }
+    
+    .headerTools {
+        padding: 41px 0;
+    }
+
+    .restaurant {
+        padding: 41px 0;
+    }
+
+    .restauranteCard {
+        display: grid;
+        grid-template-areas: "pdg ne alf dds";
+        gap: 20px 20px;
+        margin-left: 15px;
+        margin-right: 15px;                     
+
+        .pdgCard {
+            width: 100%;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+                        
+        .neCard {
+            width: 100%; 
+            padding-bottom: 0px;
+        }
+                        
+        .alfCard {
+            width: 100%; 
+            padding-bottom: 0px;
+        }
+                        
+        .ddsCard {
+            width: 100%;
         }
     }
 }

@@ -107,6 +107,7 @@ td, th {
     visibility: hidden;
   }
 }
+
 @keyframes spinner {
   0% {
     -webkit-transform: rotate(0deg);
@@ -430,7 +431,7 @@ td, th {
 
 .restauranteCard span {
   position: absolute;
-  top: 5px;
+  top: -120px;
   right: 10px;
   border: 1px solid transparent;
   border-radius: 2px;
@@ -453,7 +454,7 @@ td, th {
   border-radius: 0px 0px 15px 15px;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 100%;
   text-decoration: none;
 }
 
@@ -494,6 +495,28 @@ td, th {
 .restauranteCard .fas:focus {
   background-color: transparent;
   color: transparent;
+}
+
+.restauranteCard .pdgCard {
+  position: relative;
+  width: 90%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.restauranteCard .neCard {
+  position: relative;
+  width: 90%;
+  padding-bottom: 20px;
+}
+
+.restauranteCard .alfCard {
+  width: 90%;
+  padding-bottom: 20px;
+}
+
+.restauranteCard .ddsCard {
+  width: 90%;
 }
 
 .foot {
@@ -542,5 +565,177 @@ td, th {
 .foot .foot2 p {
   display: inline-block;
   margin-left: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .foot h1 {
+    margin-bottom: 20px;
+  }
+  .footerText {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .toolsButton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .toolsButton .button1 {
+    width: 25%;
+    margin: 20px 0 0;
+  }
+  .toolsButton .button2 {
+    width: 25%;
+  }
+  .toolsButton .button3 {
+    width: 25%;
+  }
+  .logo {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .logo img {
+    width: 30%;
+  }
+  .headerText {
+    padding-bottom: 20px;
+    padding-top: 12.5px;
+  }
+  .headerTools {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .restaurant {
+    padding-bottom: 30px;
+    padding-top: 20px;
+  }
+  .restauranteCard {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "pdg ne" "alf dds";
+    gap: 20px 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .restauranteCard .pdgCard {
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .restauranteCard .neCard {
+    width: 100%;
+    padding-bottom: 0px;
+  }
+  .restauranteCard .alfCard {
+    width: 100%;
+    padding-bottom: 0px;
+  }
+  .restauranteCard .ddsCard {
+    width: 100%;
+  }
+  .foot {
+    padding: 20px 0 40px;
+  }
+  .restauranteCard .far:hover {
+    z-index: 0;
+    color: transparent;
+    background-color: transparent;
+    -webkit-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+  }
+  .restauranteCard .fas:hover {
+    background-color: transparent;
+    color: transparent;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .logo {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  .logo img {
+    width: 20%;
+  }
+  .toolsButton {
+    margin-top: 0px;
+  }
+  .restauranteCard {
+    justify-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .restauranteCard .pdgCard {
+    width: 70%;
+  }
+  .restauranteCard .neCard {
+    width: 70%;
+  }
+  .restauranteCard .alfCard {
+    width: 70%;
+  }
+  .restauranteCard .ddsCard {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .logo img {
+    width: 15%;
+  }
+  .search form {
+    padding: 21px 0;
+  }
+  .headerText {
+    padding: 31px 0;
+  }
+  .headerTools {
+    padding: 41px 0;
+  }
+  .restaurant {
+    padding: 41px 0;
+  }
+  .restauranteCard {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "pdg ne alf dds";
+    gap: 20px 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .restauranteCard .pdgCard {
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .restauranteCard .neCard {
+    width: 100%;
+    padding-bottom: 0px;
+  }
+  .restauranteCard .alfCard {
+    width: 100%;
+    padding-bottom: 0px;
+  }
+  .restauranteCard .ddsCard {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

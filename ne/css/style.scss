@@ -302,3 +302,81 @@ $tertiary-color: #99E2D0;
         }
     }
 }
+
+@media screen and (min-width: 768px) {
+    .logo {
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+
+        img {
+        width: 40%;
+        }
+    }
+
+    .imgMenu {
+        img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+    }
+    
+    .foot {
+        h1 {
+            margin-bottom: 20px;
+        }
+    }
+    
+    .footerText {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .logo {
+        img {
+        width: 30%;
+        }
+    }
+
+    .imgMenu {
+        img {
+            height: 300px;
+        }
+    }
+
+    .foot {
+        padding: 20px 0 40px;
+    }
+
+    .container {
+        &:hover {
+            .addF {
+                display: inline;
+                animation: r-t-l 1s linear 0s 1 forwards;
+            }
+    
+            i {
+                animation: rotate 1s linear 0s 1 forwards;
+            }
+    
+            h3 {
+                right: 70px;
+            }
+    
+            p {
+                width: 180px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .logo {
+        img {
+        width: 20%;
+        }
+    }
+}
