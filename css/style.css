@@ -626,17 +626,20 @@ td, th {
     display: -ms-grid;
     display: grid;
         grid-template-areas: "pdg ne" "alf dds";
-    gap: 20px 20px;
-    margin-left: 15px;
-    margin-right: 15px;
+    gap: 20px 40px;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .restauranteCard .pdgCard {
-    width: 100%;
+    width: auto;
     padding-bottom: 20px;
     padding-top: 20px;
   }
   .restauranteCard .neCard {
-    width: 100%;
+    width: auto;
     padding-bottom: 0px;
   }
   .restauranteCard .alfCard {
