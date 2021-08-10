@@ -139,6 +139,10 @@ $tertiary-color: #99E2D0;
         font-size: small;
         font-weight: 400;
         padding: 10px 15px;
+
+        &:hover {
+            background: linear-gradient(174deg, lighten( $secondary-color, 10% ), lighten( $primary-color, 10% ));
+        }
     }
     
 }
@@ -358,13 +362,15 @@ $tertiary-color: #99E2D0;
         top: 15px;
         right: 20px;
         z-index: 10;
-        background-color: white;
+        color: white;
+        background-clip: content-box;
 
         &:focus {
             z-index: 0;
             color: transparent;
             background-color: transparent;
             transition: all 2s ease-out;
+            background-clip: content-box;
         }
     }
 
@@ -373,11 +379,12 @@ $tertiary-color: #99E2D0;
         z-index: 1;
         top: 15px;
         right: 20px;
-        color: $secondary-color;
+        background-clip: content-box;
 
         &:focus {
             background-color: transparent;
             color: transparent;
+            background-clip: content-box;
         }
     }
 
@@ -421,6 +428,11 @@ $tertiary-color: #99E2D0;
 
     p {
         margin-bottom: 7px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
     }
 
     .foot1 {

@@ -208,6 +208,10 @@ td, th {
   padding: 10px 15px;
 }
 
+.headerText button:hover {
+  background: linear-gradient(174deg, #fface8, #ae80e5);
+}
+
 .headerTools {
   padding-top: 40px;
   padding-bottom: 60px;
@@ -473,7 +477,8 @@ td, th {
   top: 15px;
   right: 20px;
   z-index: 10;
-  background-color: white;
+  color: white;
+  background-clip: content-box;
 }
 
 .restauranteCard .far:focus {
@@ -482,6 +487,7 @@ td, th {
   background-color: transparent;
   -webkit-transition: all 2s ease-out;
   transition: all 2s ease-out;
+  background-clip: content-box;
 }
 
 .restauranteCard .fas {
@@ -489,12 +495,13 @@ td, th {
   z-index: 1;
   top: 15px;
   right: 20px;
-  color: #FF79DA;
+  background-clip: content-box;
 }
 
 .restauranteCard .fas:focus {
   background-color: transparent;
   color: transparent;
+  background-clip: content-box;
 }
 
 .restauranteCard .pdgCard {
@@ -537,6 +544,11 @@ td, th {
 
 .foot p {
   margin-bottom: 7px;
+}
+
+.foot a {
+  text-decoration: none;
+  color: white;
 }
 
 .foot .foot1 {

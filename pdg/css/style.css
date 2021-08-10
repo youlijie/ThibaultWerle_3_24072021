@@ -149,6 +149,10 @@ td, th {
   margin-right: auto;
 }
 
+.menu button:hover {
+  background: linear-gradient(174deg, #fface8, #ae80e5);
+}
+
 .menu .fakediv {
   -webkit-animation: fade 3s forwards 1s;
           animation: fade 3s forwards 1s;
@@ -291,11 +295,21 @@ td, th {
 
 .entrees h4 {
   margin-left: 15px;
+  margin-bottom: 14px;
   font-weight: 300;
   font-size: small;
-  border-bottom: 2px solid #99E2D0;
-  margin-right: 87%;
-  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.entrees h4::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
 }
 
 .entrees p {
@@ -308,12 +322,21 @@ td, th {
 
 .plats h4 {
   margin-left: 15px;
+  margin-bottom: 14px;
   font-weight: 300;
   font-size: small;
-  border-bottom: 2px solid #99E2D0;
-  margin-right: 87%;
-  margin-bottom: 15px;
-  margin-top: 30px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.plats h4::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
 }
 
 .plats p {
@@ -326,20 +349,21 @@ td, th {
 
 .desserts h4 {
   margin-left: 15px;
+  margin-bottom: 14px;
   font-weight: 300;
   font-size: small;
-  border-bottom: 2px solid #99E2D0;
-  margin-right: 87%;
-  margin-bottom: 15px;
-  margin-top: 30px;
+  position: relative;
+  padding-bottom: 5px;
 }
 
-.desserts p {
-  overflow: hidden;
-  display: inline-block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: 231px;
+.desserts h4::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
 }
 
 .foot {
@@ -360,6 +384,11 @@ td, th {
 
 .foot p {
   margin-bottom: 7px;
+}
+
+.foot a {
+  text-decoration: none;
+  color: white;
 }
 
 .foot .foot1 {

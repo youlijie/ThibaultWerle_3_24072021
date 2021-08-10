@@ -104,6 +104,10 @@ $tertiary-color: #99E2D0;
         padding: 10px 40px;
         margin-left: auto;
         margin-right: auto;
+
+        &:hover {
+            background: linear-gradient(174deg, lighten( $secondary-color, 10% ), lighten( $primary-color, 10% ));
+        }
     }
 
     .fakediv {
@@ -201,11 +205,21 @@ $tertiary-color: #99E2D0;
 .entrees {
     h4 {
         margin-left: 15px;
+        margin-bottom: 14px;
         font-weight: 300;
         font-size: small;
-        border-bottom: 2px solid $tertiary-color;
-        margin-right: 87%;
-        margin-bottom: 15px;
+        position: relative;
+        padding-bottom: 5px;
+        
+        &::after {
+            content: "";
+            width: 40px;
+            height: 3px;
+            background-color: #99E2D0;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
     }
 
     p {
@@ -220,12 +234,21 @@ $tertiary-color: #99E2D0;
 .plats {
     h4 {
         margin-left: 15px;
+        margin-bottom: 14px;
         font-weight: 300;
         font-size: small;
-        border-bottom: 2px solid $tertiary-color;
-        margin-right: 87%;
-        margin-bottom: 15px;
-        margin-top: 30px;
+        position: relative;
+        padding-bottom: 5px;
+        
+        &::after {
+            content: "";
+            width: 40px;
+            height: 3px;
+            background-color: #99E2D0;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
     }
 
     p {
@@ -240,12 +263,21 @@ $tertiary-color: #99E2D0;
 .desserts {
     h4 {
         margin-left: 15px;
+        margin-bottom: 14px;
         font-weight: 300;
         font-size: small;
-        border-bottom: 2px solid $tertiary-color;
-        margin-right: 87%;
-        margin-bottom: 15px;
-        margin-top: 30px;
+        position: relative;
+        padding-bottom: 5px;
+        
+        &::after {
+            content: "";
+            width: 40px;
+            height: 3px;
+            background-color: #99E2D0;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
     }
 
     p {
@@ -274,6 +306,11 @@ $tertiary-color: #99E2D0;
 
     p {
         margin-bottom: 7px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
     }
 
     .foot1 {
