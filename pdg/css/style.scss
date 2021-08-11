@@ -20,7 +20,7 @@ $tertiary-color: #99E2D0;
         width: 50%;
     }
 
-    i {
+    svg {
         position: absolute;
         left: 12px;
         top: 6px;
@@ -54,13 +54,20 @@ $tertiary-color: #99E2D0;
         top: 30px;
         right: 25px;
         z-index: 10;
+        cursor: pointer;
         background-color: white;
+        stroke-width: 0px;
+        stroke: transparent;
+        outline: none;
+        
 
         &:focus {
             z-index: 0;
             color: transparent;
             background-color: transparent;
             transition: all 2s ease-out;
+            stroke-width: 0px;
+            outline: none;
         }
     }
 
@@ -69,13 +76,55 @@ $tertiary-color: #99E2D0;
         z-index: 1;
         top: 30px;
         right: 25px;
-        color: $secondary-color;
+        cursor: pointer;
+        stroke-width: 0px;
+        stroke: transparent;
+        fill: url(#lgrad);
+        outline: none;
 
         &:focus {
             background-color: transparent;
             color: transparent;
+            stroke-width: 0px;
+            outline: none;
         }
     }
+
+      .testi2 {
+        display:flex;
+        justify-content:center;
+        font-size:30px;
+        stroke-width: 0px;
+        stroke: transparent;
+        z-index: 10;
+        outline: none;
+      }
+      
+      .testi2:focus svg * {
+        fill: url(#lgrad);
+        z-index: 0;
+        color: transparent;
+        background-color: transparent;
+        transition: all 2s ease-out;
+        stroke-width: 0px;
+        outline: none;
+      }
+
+      .testi1 {
+        display:flex;
+        justify-content:center;
+        font-size:30px;
+        stroke-width: 0px;
+        stroke: transparent;
+        z-index: 1;
+        outline: none;
+      }
+
+      .testi1 svg * {
+        fill: url(#lgrad);
+        outline: none;
+      }
+
 
     .container {
         position: relative;
@@ -155,13 +204,28 @@ $tertiary-color: #99E2D0;
         right: 16px;
     }
 
+    .addF {
+        position: absolute;
+        background-color: $tertiary-color;
+        color: white;
+        border: 1px solid $tertiary-color;
+        border-radius: 0 15px 15px 0;
+        padding: 19px;
+        top: 0px;
+        right: 0px;
+        overflow: hidden;
+        display: none;
+        animation: r-t-l-out 1s linear forwards;
+        transition: padding 1s;
+    }
+
     &:active {
         .addF {
             display: inline;
             animation: r-t-l 1s linear 0s 1 forwards;
         }
 
-        i {
+        svg {
             animation: rotate 1s linear 0s 1 forwards;
         }
 
@@ -180,22 +244,14 @@ $tertiary-color: #99E2D0;
     to {padding: 19px;}
 }
 
+@keyframes r-t-l-out {
+    from {padding: 19px;}
+    to {padding: 19px 0px 19px 0px;}
+}
+
 @keyframes rotate {
     from {transform: rotate(360deg);}
     to {transform: rotate(0deg);}
-}
-
-.addF {
-    position: absolute;
-    background-color: $tertiary-color;
-    color: white;
-    border: 1px solid $tertiary-color;
-    border-radius: 0 15px 15px 0;
-    padding: 19px;
-    top: 0px;
-    right: 0px;
-    overflow: hidden;
-    display: none;
 }
 
 .button {
@@ -227,7 +283,7 @@ $tertiary-color: #99E2D0;
         display: inline-block;
         text-overflow: ellipsis;
         white-space: nowrap;
-  	    width:229px;
+  	    width:80%;
     }
 }
 
@@ -256,7 +312,7 @@ $tertiary-color: #99E2D0;
         display: inline-block;
         text-overflow: ellipsis;
         white-space: nowrap;
-  	    width:229px;
+        width:80%;
     }
 }
 
@@ -278,6 +334,14 @@ $tertiary-color: #99E2D0;
             bottom: 0px;
             left: 0px;
         }
+    }
+
+    p {
+        overflow: hidden;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width:80%;
     }
 }
 
@@ -307,7 +371,8 @@ $tertiary-color: #99E2D0;
 
     .foot1 {
         position: relative;
-        i {
+        
+        svg {
             display: inline-block;
             margin-left: 20px;
         }
@@ -320,9 +385,11 @@ $tertiary-color: #99E2D0;
 
     .foot2 {
         position: relative;
-        i {
+        
+        svg {
             display: inline-block;
             margin-left: 20px;
+            transform: rotate(-30deg);
         }
 
         p {
@@ -376,23 +443,25 @@ $tertiary-color: #99E2D0;
         }
     }
 
+    .menu {
+        width: 70%;
+        margin: auto;
+    }
+
     .container {
+
         &:hover {
             .addF {
                 display: inline;
-                animation: r-t-l 1s linear 0s 1 forwards;
+                animation: r-t-l 1s linear 0s 1 both;
             }
     
-            i {
+            svg {
                 animation: rotate 1s linear 0s 1 forwards;
             }
     
             h3 {
                 right: 70px;
-            }
-    
-            p {
-                width: 180px;
             }
         }
     }
@@ -407,5 +476,9 @@ $tertiary-color: #99E2D0;
         img {
         width: 20%;
         }
+    }
+
+    .menu {
+        width: 60%;
     }
 }

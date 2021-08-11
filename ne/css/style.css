@@ -62,7 +62,7 @@ td, th {
   width: 50%;
 }
 
-.logo i {
+.logo svg {
   position: absolute;
   left: 12px;
   top: 6px;
@@ -94,7 +94,11 @@ td, th {
   top: 30px;
   right: 25px;
   z-index: 10;
+  cursor: pointer;
   background-color: white;
+  stroke-width: 0px;
+  stroke: transparent;
+  outline: none;
 }
 
 .menu .hnp:focus {
@@ -103,6 +107,8 @@ td, th {
   background-color: transparent;
   -webkit-transition: all 2s ease-out;
   transition: all 2s ease-out;
+  stroke-width: 0px;
+  outline: none;
 }
 
 .menu .hp {
@@ -110,12 +116,62 @@ td, th {
   z-index: 1;
   top: 30px;
   right: 25px;
-  color: #FF79DA;
+  cursor: pointer;
+  stroke-width: 0px;
+  stroke: transparent;
+  fill: url(#lgrad);
+  outline: none;
 }
 
 .menu .hp:focus {
   background-color: transparent;
   color: transparent;
+  stroke-width: 0px;
+  outline: none;
+}
+
+.menu .testi2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  stroke-width: 0px;
+  stroke: transparent;
+  z-index: 10;
+  outline: none;
+}
+
+.menu .testi2:focus svg * {
+  fill: url(#lgrad);
+  z-index: 0;
+  color: transparent;
+  background-color: transparent;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+  stroke-width: 0px;
+  outline: none;
+}
+
+.menu .testi1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 30px;
+  stroke-width: 0px;
+  stroke: transparent;
+  z-index: 1;
+  outline: none;
+}
+
+.menu .testi1 svg * {
+  fill: url(#lgrad);
+  outline: none;
 }
 
 .menu .container {
@@ -223,7 +279,7 @@ td, th {
           animation: r-t-l 1s linear 0s 1 forwards;
 }
 
-.container:active i {
+.container:active svg {
   -webkit-animation: rotate 1s linear 0s 1 forwards;
           animation: rotate 1s linear 0s 1 forwards;
 }
@@ -317,7 +373,7 @@ td, th {
   display: inline-block;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 229px;
+  width: 80%;
 }
 
 .plats h4 {
@@ -344,7 +400,7 @@ td, th {
   display: inline-block;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 229px;
+  width: 80%;
 }
 
 .desserts h4 {
@@ -371,7 +427,7 @@ td, th {
   display: inline-block;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 231px;
+  width: 80%;
 }
 
 .foot {
@@ -403,7 +459,7 @@ td, th {
   position: relative;
 }
 
-.foot .foot1 i {
+.foot .foot1 svg {
   display: inline-block;
   margin-left: 20px;
 }
@@ -417,9 +473,11 @@ td, th {
   position: relative;
 }
 
-.foot .foot2 i {
+.foot .foot2 svg {
   display: inline-block;
   margin-left: 20px;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
 }
 
 .foot .foot2 p {
@@ -461,6 +519,10 @@ td, th {
   .imgMenu img {
     height: 300px;
   }
+  .menu {
+    width: 70%;
+    margin: auto;
+  }
   .foot {
     padding: 20px 0 40px;
   }
@@ -469,7 +531,7 @@ td, th {
     -webkit-animation: r-t-l 1s linear 0s 1 forwards;
             animation: r-t-l 1s linear 0s 1 forwards;
   }
-  .container:hover i {
+  .container:hover svg {
     -webkit-animation: rotate 1s linear 0s 1 forwards;
             animation: rotate 1s linear 0s 1 forwards;
   }
@@ -484,6 +546,9 @@ td, th {
 @media screen and (min-width: 1440px) {
   .logo img {
     width: 20%;
+  }
+  .menu {
+    width: 60%;
   }
 }
 /*# sourceMappingURL=style.css.map */

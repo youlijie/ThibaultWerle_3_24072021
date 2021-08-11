@@ -359,32 +359,31 @@ $tertiary-color: #99E2D0;
     
     .far {
         position: absolute;
-        top: 15px;
-        right: 20px;
+        top: 30px;
+        right: 25px;
         z-index: 10;
-        color: white;
-        background-clip: content-box;
+        cursor: pointer;
+        background-color: white;
 
         &:focus {
             z-index: 0;
             color: transparent;
             background-color: transparent;
             transition: all 2s ease-out;
-            background-clip: content-box;
         }
     }
 
     .fas {
         position: absolute;
         z-index: 1;
-        top: 15px;
-        right: 20px;
-        background-clip: content-box;
+        cursor: pointer;
+        top: 30px;
+        right: 25px;
+        color: $secondary-color;
 
         &:focus {
             background-color: transparent;
             color: transparent;
-            background-clip: content-box;
         }
     }
 
@@ -479,15 +478,16 @@ $tertiary-color: #99E2D0;
     .toolsButton {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
 
         .button1 {
             width: 25%;
-            margin: 20px 0 0;
+            margin: 20px 20px 0;
         }
 
         .button2 {
             width: 25%;
+            margin-right: 20px;
         }
 
         .button3 {
@@ -574,6 +574,7 @@ $tertiary-color: #99E2D0;
 }
 
 @media screen and (min-width: 1440px) {
+
     .logo {
         text-align: center;
         margin-top: 15px;
@@ -584,29 +585,73 @@ $tertiary-color: #99E2D0;
         }
     }
 
+    .headerTools {
+        text-align: center;
+
+        h1 {
+            margin-right: 70%;
+        }
+    }
+
     .toolsButton {
         margin-top: 0px;
+        margin-bottom: 10px;
+
+        .button1 {
+            width: 20%;
+            margin: 20px 30px 0;
+        }
+
+        .button2 {
+            width: 20%;
+            margin-right: 30px;
+        }
+
+        .button3 {
+            width: 20%;
+        }
+    }
+
+    .restaurant {
+        h1 {
+            text-align: center;
+            margin-right: 70%;
+        }
     }
 
     .restauranteCard {
-        justify-items: center;
-        margin-left: 0px;
-        margin-right: 0px;                     
+        display: grid;
+        grid-template-areas: "pdg ne alf dds";
+        gap: 0px 80px;         
+        margin: 0px;
+        justify-content: center;
 
         .pdgCard {
-            width: 70%;
+            width: 224px;
+            height: 224px;
+            padding-bottom: 20px;
+            padding-top: 0px;
+            margin-top: 20px;
         }
                         
         .neCard {
-            width: 70%;
+            width: 224px;
+            height: 224px;
+            padding-bottom: 0px;
+            margin-top: 20px;
         }
                         
         .alfCard {
-            width: 70%;
+            width: 224px;
+            height: 224px; 
+            padding-bottom: 0px;
+            margin-top: 20px;
         }
                         
         .ddsCard {
-            width: 70%;
+            width: 224px;
+            height: 224px;
+            margin-top: 20px;
         }
     }
 }
@@ -638,33 +683,5 @@ $tertiary-color: #99E2D0;
 
     .restaurant {
         padding: 41px 0;
-    }
-
-    .restauranteCard {
-        display: grid;
-        grid-template-areas: "pdg ne alf dds";
-        gap: 20px 20px;
-        margin-left: 15px;
-        margin-right: 15px;                     
-
-        .pdgCard {
-            width: 100%;
-            padding-bottom: 20px;
-            padding-top: 20px;
-        }
-                        
-        .neCard {
-            width: 100%; 
-            padding-bottom: 0px;
-        }
-                        
-        .alfCard {
-            width: 100%; 
-            padding-bottom: 0px;
-        }
-                        
-        .ddsCard {
-            width: 100%;
-        }
     }
 }
