@@ -210,44 +210,47 @@ $tertiary-color: #99E2D0;
         color: white;
         border: 1px solid $tertiary-color;
         border-radius: 0 15px 15px 0;
-        padding: 19px;
+        padding: 19px 0px 19px 0px;
         top: 0px;
         right: 0px;
         overflow: hidden;
-        display: none;
-        animation: r-t-l-out 1s linear forwards;
-        transition: padding 1s;
+        visibility: hidden;
+        transition: all 0.4s;
     }
 
     &:active {
         .addF {
             display: inline;
-            animation: r-t-l 1s linear 0s 1 forwards;
+            animation: r-t-l 1s linear 0s 1 ease-in-out;
+            transition: all 0.4s;
         }
 
         svg {
             animation: rotate 1s linear 0s 1 forwards;
+            transition: all 0.4s;
         }
 
         h3 {
             right: 70px;
+            transition: all 0.4s;
         }
 
         p {
             width: 180px;
+            transition: all 0.4s;
         }
     }
 }
 
-@keyframes r-t-l {
-    from {padding: 19px 0px 19px 0px;}
-    to {padding: 19px;}
+/* @keyframes r-t-l {
+    from {padding: 19px 0px 19px 0px; visibility: hidden;}
+    to {padding: 19px; visibility: visible;}
 }
 
 @keyframes r-t-l-out {
     from {padding: 19px;}
     to {padding: 19px 0px 19px 0px;}
-}
+} */
 
 @keyframes rotate {
     from {transform: rotate(360deg);}
@@ -452,16 +455,19 @@ $tertiary-color: #99E2D0;
 
         &:hover {
             .addF {
-                display: inline;
-                animation: r-t-l 1s linear 0s 1 both;
+                visibility: visible;
+                padding: 19px;
+                transition: all 0.4s;
             }
     
             svg {
                 animation: rotate 1s linear 0s 1 forwards;
+                transition: all 0.4s;
             }
     
             h3 {
                 right: 70px;
+                transition: all 0.4s;
             }
         }
     }

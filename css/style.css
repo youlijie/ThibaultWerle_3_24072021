@@ -167,7 +167,7 @@ td, th {
   outline: none;
 }
 
-.search i {
+.search svg {
   position: relative;
   left: 25px;
 }
@@ -273,7 +273,7 @@ td, th {
   background-color: rgba(147, 86, 220, 0);
 }
 
-.toolsButton .button1:hover i {
+.toolsButton .button1:hover svg {
   color: #9356DC;
 }
 
@@ -359,7 +359,7 @@ td, th {
   font-weight: bold;
 }
 
-.toolsButton i {
+.toolsButton svg {
   position: absolute;
   left: 30px;
   color: #7e7e7e;
@@ -449,7 +449,8 @@ td, th {
 .restauranteCard .containerR {
   position: relative;
   color: black;
-  padding: 10px 20px;
+  padding: 10px 20px 0 20px;
+  height: 70px;
   background-color: white;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -472,35 +473,89 @@ td, th {
   color: black;
 }
 
-.restauranteCard .far {
+.restauranteCard .hnp {
   position: absolute;
   top: 30px;
   right: 25px;
   z-index: 10;
   cursor: pointer;
   background-color: white;
+  stroke-width: 0px;
+  stroke: transparent;
+  outline: none;
 }
 
-.restauranteCard .far:focus {
+.restauranteCard .hnp:focus {
   z-index: 0;
   color: transparent;
   background-color: transparent;
   -webkit-transition: all 2s ease-out;
   transition: all 2s ease-out;
+  stroke-width: 0px;
+  outline: none;
 }
 
-.restauranteCard .fas {
+.restauranteCard .hp {
   position: absolute;
   z-index: 1;
-  cursor: pointer;
   top: 30px;
   right: 25px;
-  color: #FF79DA;
+  cursor: pointer;
+  stroke-width: 0px;
+  stroke: transparent;
+  fill: url(#lgrad);
+  outline: none;
 }
 
-.restauranteCard .fas:focus {
+.restauranteCard .hp:focus {
   background-color: transparent;
   color: transparent;
+  stroke-width: 0px;
+  outline: none;
+}
+
+.restauranteCard .testi2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+  stroke-width: 0px;
+  stroke: transparent;
+  z-index: 10;
+  outline: none;
+}
+
+.restauranteCard .testi2:focus svg * {
+  fill: url(#lgrad);
+  z-index: 0;
+  color: transparent;
+  background-color: transparent;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+  stroke-width: 0px;
+  outline: none;
+}
+
+.restauranteCard .testi1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+  stroke-width: 0px;
+  stroke: transparent;
+  z-index: 1;
+  outline: none;
+}
+
+.restauranteCard .testi1 svg * {
+  fill: url(#lgrad);
+  outline: none;
 }
 
 .restauranteCard .pdgCard {
@@ -554,7 +609,7 @@ td, th {
   position: relative;
 }
 
-.foot .foot1 i {
+.foot .foot1 svg {
   display: inline-block;
   margin-left: 20px;
 }
@@ -568,7 +623,7 @@ td, th {
   position: relative;
 }
 
-.foot .foot2 i {
+.foot .foot2 svg {
   display: inline-block;
   margin-left: 20px;
 }
@@ -665,14 +720,14 @@ td, th {
   .foot {
     padding: 20px 0 40px;
   }
-  .restauranteCard .far:hover {
+  .restauranteCard .hnp:hover {
     z-index: 0;
     color: transparent;
     background-color: transparent;
     -webkit-transition: all 2s ease-out;
     transition: all 2s ease-out;
   }
-  .restauranteCard .fas:hover {
+  .restauranteCard .hp:hover {
     background-color: transparent;
     color: transparent;
   }

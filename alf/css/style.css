@@ -273,23 +273,46 @@ td, th {
   right: 16px;
 }
 
+.container .addF {
+  position: absolute;
+  background-color: #99E2D0;
+  color: white;
+  border: 1px solid #99E2D0;
+  border-radius: 0 15px 15px 0;
+  padding: 19px 0px 19px 0px;
+  top: 0px;
+  right: 0px;
+  overflow: hidden;
+  visibility: hidden;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
 .container:active .addF {
   display: inline;
-  -webkit-animation: r-t-l 1s linear 0s 1 forwards;
-          animation: r-t-l 1s linear 0s 1 forwards;
+  -webkit-animation: r-t-l 1s linear 0s 1 ease-in-out;
+          animation: r-t-l 1s linear 0s 1 ease-in-out;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .container:active svg {
   -webkit-animation: rotate 1s linear 0s 1 forwards;
           animation: rotate 1s linear 0s 1 forwards;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .container:active h3 {
   right: 70px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .container:active p {
   width: 180px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 @-webkit-keyframes r-t-l {
@@ -330,19 +353,6 @@ td, th {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-}
-
-.addF {
-  position: absolute;
-  background-color: #99E2D0;
-  color: white;
-  border: 1px solid #99E2D0;
-  border-radius: 0 15px 15px 0;
-  padding: 19px;
-  top: 0px;
-  right: 0px;
-  overflow: hidden;
-  display: none;
 }
 
 .button {
@@ -524,19 +534,21 @@ td, th {
     margin: auto;
   }
   .container:hover .addF {
-    display: inline;
-    -webkit-animation: r-t-l 1s linear 0s 1 forwards;
-            animation: r-t-l 1s linear 0s 1 forwards;
+    visibility: visible;
+    padding: 19px;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
   }
   .container:hover svg {
     -webkit-animation: rotate 1s linear 0s 1 forwards;
             animation: rotate 1s linear 0s 1 forwards;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
   }
   .container:hover h3 {
     right: 70px;
-  }
-  .container:hover p {
-    width: 180px;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
   }
   .foot {
     padding: 20px 0 40px;

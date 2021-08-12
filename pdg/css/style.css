@@ -279,72 +279,51 @@ td, th {
   color: white;
   border: 1px solid #99E2D0;
   border-radius: 0 15px 15px 0;
-  padding: 19px;
+  padding: 19px 0px 19px 0px;
   top: 0px;
   right: 0px;
   overflow: hidden;
-  display: none;
-  -webkit-animation: r-t-l-out 1s linear forwards;
-          animation: r-t-l-out 1s linear forwards;
-  -webkit-transition: padding 1s;
-  transition: padding 1s;
+  visibility: hidden;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .container:active .addF {
   display: inline;
-  -webkit-animation: r-t-l 1s linear 0s 1 forwards;
-          animation: r-t-l 1s linear 0s 1 forwards;
+  -webkit-animation: r-t-l 1s linear 0s 1 ease-in-out;
+          animation: r-t-l 1s linear 0s 1 ease-in-out;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .container:active svg {
   -webkit-animation: rotate 1s linear 0s 1 forwards;
           animation: rotate 1s linear 0s 1 forwards;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .container:active h3 {
   right: 70px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .container:active p {
   width: 180px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
-@-webkit-keyframes r-t-l {
-  from {
-    padding: 19px 0px 19px 0px;
-  }
-  to {
-    padding: 19px;
-  }
-}
-
-@keyframes r-t-l {
-  from {
-    padding: 19px 0px 19px 0px;
-  }
-  to {
-    padding: 19px;
-  }
-}
-
-@-webkit-keyframes r-t-l-out {
-  from {
-    padding: 19px;
-  }
-  to {
-    padding: 19px 0px 19px 0px;
-  }
+/* @keyframes r-t-l {
+    from {padding: 19px 0px 19px 0px; visibility: hidden;}
+    to {padding: 19px; visibility: visible;}
 }
 
 @keyframes r-t-l-out {
-  from {
-    padding: 19px;
-  }
-  to {
-    padding: 19px 0px 19px 0px;
-  }
-}
-
+    from {padding: 19px;}
+    to {padding: 19px 0px 19px 0px;}
+} */
 @-webkit-keyframes rotate {
   from {
     -webkit-transform: rotate(360deg);
@@ -355,7 +334,6 @@ td, th {
             transform: rotate(0deg);
   }
 }
-
 @keyframes rotate {
   from {
     -webkit-transform: rotate(360deg);
@@ -546,16 +524,21 @@ td, th {
     margin: auto;
   }
   .container:hover .addF {
-    display: inline;
-    -webkit-animation: r-t-l 1s linear 0s 1 both;
-            animation: r-t-l 1s linear 0s 1 both;
+    visibility: visible;
+    padding: 19px;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
   }
   .container:hover svg {
     -webkit-animation: rotate 1s linear 0s 1 forwards;
             animation: rotate 1s linear 0s 1 forwards;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
   }
   .container:hover h3 {
     right: 70px;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
   }
   .foot {
     padding: 20px 0 40px;

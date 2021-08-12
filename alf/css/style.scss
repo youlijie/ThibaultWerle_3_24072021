@@ -203,22 +203,40 @@ $tertiary-color: #99E2D0;
         right: 16px;
     }
 
+    .addF {
+        position: absolute;
+        background-color: $tertiary-color;
+        color: white;
+        border: 1px solid $tertiary-color;
+        border-radius: 0 15px 15px 0;
+        padding: 19px 0px 19px 0px;
+        top: 0px;
+        right: 0px;
+        overflow: hidden;
+        visibility: hidden;
+        transition: all 0.4s;
+    }
+
     &:active {
         .addF {
             display: inline;
-            animation: r-t-l 1s linear 0s 1 forwards;
+            animation: r-t-l 1s linear 0s 1 ease-in-out;
+            transition: all 0.4s;
         }
 
         svg {
             animation: rotate 1s linear 0s 1 forwards;
+            transition: all 0.4s;
         }
 
         h3 {
             right: 70px;
+            transition: all 0.4s;
         }
 
         p {
             width: 180px;
+            transition: all 0.4s;
         }
     }
 }
@@ -231,19 +249,6 @@ $tertiary-color: #99E2D0;
 @keyframes rotate {
     from {transform: rotate(360deg);}
     to {transform: rotate(0deg);}
-}
-
-.addF {
-    position: absolute;
-    background-color: $tertiary-color;
-    color: white;
-    border: 1px solid $tertiary-color;
-    border-radius: 0 15px 15px 0;
-    padding: 19px;
-    top: 0px;
-    right: 0px;
-    overflow: hidden;
-    display: none;
 }
 
 .button {
@@ -443,20 +448,19 @@ $tertiary-color: #99E2D0;
     .container {
         &:hover {
             .addF {
-                display: inline;
-                animation: r-t-l 1s linear 0s 1 forwards;
+                visibility: visible;
+                padding: 19px;
+                transition: all 0.4s;
             }
     
             svg {
                 animation: rotate 1s linear 0s 1 forwards;
+                transition: all 0.4s;
             }
     
             h3 {
                 right: 70px;
-            }
-    
-            p {
-                width: 180px;
+                transition: all 0.4s;
             }
         }
     }
